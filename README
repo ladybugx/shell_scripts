@@ -1,0 +1,38 @@
+Ladybugx - Shellscripts
+
+1. eMake - added Jan 29 2012
+
+#title : eMake (e = easy as in easyMake)
+
+#Problem : 
+	cmake only allows for one "CMakeList.txt" per folder. 
+	there is no equivalent to "make -f myproject.c"
+
+#Solution :
+	save the cmake file as "CMakeList.myproject"
+	the script renames the file to "CMakeLists.txt",
+	performs the cmake & make commands and
+	renames "CMakeLists.txt" to "CMakeLists.myproject"
+
+#Steps : 
+	mv ../CMakeLists.myproject ../CMakeLists.txt
+	cmake .. 
+	make
+	mv ../CMakeLists.txt ../CMakeLists.myproject
+
+#Setup* :
+	create a "build" folder for the project
+	save eMake in this folder 
+
+#Execute :
+       call eMake with the argument "myproject"
+       ./eMake myproject
+
+*alternateively save eMake in /usr/local/bin.
+within the "build" folder execute : eMake myproject
+
+	 	
+	
+	
+	
+
