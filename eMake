@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#easymake
+
+file=CMakeLists.
+txt=txt
+new=_new
+
+cp ../$file$1 ../$file$txt
+cmake ..
+make
+cp ../$file$txt ../$file$1
