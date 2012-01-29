@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#easymake
+#eMake 
+#created 29 Jan 2019
 
 file=CMakeLists.
 txt=txt
